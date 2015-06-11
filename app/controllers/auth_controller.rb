@@ -21,10 +21,9 @@ get '/cats' do
 end
 
 post '/login' do
-  @user = User.find_by(username: params[:username])
-  if !@user.nil? && @user.password == params[:password]
+  @user = User.authenticate(params[:username], params[:password])
+  if @user
     session[:user_id] = @user.id
-    p session
     redirect '/'
   else
     @messages = ["User name and password do not match"]
