@@ -1,9 +1,13 @@
+li {
+  list-style-type: none;
+}
 .container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  margin-top: 3em;
 }
 th {
   text-align: left;
+}
+.form-control {
+  width: 80%;
+  margin: auto;
 }

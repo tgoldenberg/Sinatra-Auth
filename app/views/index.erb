@@ -1,8 +1,18 @@
 <div class="col-md-12">
   <div class="well">
-    <h1>Cats and Dogs</h1>'
-    <button class="btn btn-lg btn-success">Signup</button>
-    <button class="btn btn-lg btn-success">Login</button>
+    <h1>Cats and Dogs</h1>
+    <% if !session[:user_id] %>
+      <a href="/signup"><button class="btn btn-lg btn-success">
+        Signup
+      </button></a>
+      <a href="/login"><button class="btn btn-lg btn-success">
+        Login
+      </button></a>
+    <% else %>
+      <a href="/logout"><button class="btn btn-lg btn-success">
+        Logout
+      </button></a>
+    <% end %>
   </div>
   <img src="http://uscchannel.com/wp-content/uploads/2014/10/453768-cats-cute.jpg" width="200">
   <img src="http://canineplanet.net/wp-content/uploads/2014/08/cute-dog-2014-08-22.jpg" width="200">

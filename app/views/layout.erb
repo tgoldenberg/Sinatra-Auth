@@ -20,6 +20,15 @@
   <title></title>
 </head>
 <body>
+  <% if @messages %>
+    <div class="errors">
+      <ul>
+        <% @messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <%= yield %>
 </body>
 </html>
